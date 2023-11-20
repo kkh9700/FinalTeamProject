@@ -7,7 +7,7 @@ public class DungeonManager : MonoBehaviour
     public static DungeonManager Instance;
 
     public int spawnIdx = 0;
-    private int goblinkillCount = 0;
+    public int goblinkillCount = 0;
 
     [field: Header("Audio")]
     [SerializeField] private AudioClip DungeonSound;
