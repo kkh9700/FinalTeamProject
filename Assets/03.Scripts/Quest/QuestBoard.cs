@@ -181,7 +181,8 @@ public class QuestBoard : MonoBehaviour
             {
                 questProgmonsterName.color = Color.green;
                 //여기에 ItemAddTest추가
-                //ItemAddTest(selectedQuest);
+                ItemSO item = new ItemSO();
+                ItemAddTest(item);
             }
         }
         else if (selectedQuest.questType == QuestType.InfiniteMonsterQuest) //무한몬스터퀘스트
@@ -223,7 +224,7 @@ public class QuestBoard : MonoBehaviour
             {
                 if (acceptedQuest.questIndex == 1) // 아이템 퀘스트
                 {
-                    // 해당 아이템 퀘스트의 조건 충족 및 보상 처리
+                    // 해당 아이템 퀘스트의 조건 충족 및 완료 처리
                     if(dropResourceitemcount >= selectQuest.questComplete) //완료조건보다 많거나 같을때
                     {
                         controller.ShowPopup();
