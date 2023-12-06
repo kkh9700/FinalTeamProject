@@ -19,7 +19,7 @@ MonoBehaviour:
     \uC0DD\uAC01\uC744 \uC548\uD55C\uB2E4.. \uCD5C\uB300\uD55C \uB9CE\uC774 \uCC98\uCE58\uD574\uC8FC\uAE38
     \uBC14\uB798!"
   <questCondition>k__BackingField: "\uACE0\uBE14\uB9B0 1000\uB9C8\uB9AC \uCC98\uCE58"
-  <questComplete>k__BackingField: 100
+  <questComplete>k__BackingField: 1000
   <questReward>k__BackingField: "\uAE08\uD654 10\uAC1C"
   <questRewardCoin>k__BackingField: 10
   relatedNPCs: []

@@ -20,7 +20,7 @@ MonoBehaviour:
     15\uB9C8\uB9AC \uC815\uB3C4\uBA74 \uB531 \uC88B\uC744\uAC83 \uAC19\uC544\uC694!"
   <questCondition>k__BackingField: "\uACE0\uBE14\uB9B0 \uC804\uC0AC 30\uB9C8\uB9AC
     \uCC98\uCE58"
-  <questComplete>k__BackingField: 15
+  <questComplete>k__BackingField: 30
   <questReward>k__BackingField: "\uAE08\uD654 5\uAC1C"
   <questRewardCoin>k__BackingField: 5
   relatedNPCs: []
