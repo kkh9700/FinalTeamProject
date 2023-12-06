@@ -65,6 +65,7 @@ public class DungeonManager : Singleton<DungeonManager>
         {
             Boss boss = null;
             boss = necrmanserObjectPool.GetObject();
+            boss.objectPoolReturn += necrmanserObjectPool.ReturnObject;
             boss.BossNavMeshAgent.enabled = false;
             boss.gameObject.transform.position = spawnPos;
             boss.BossNavMeshAgent.enabled = true;

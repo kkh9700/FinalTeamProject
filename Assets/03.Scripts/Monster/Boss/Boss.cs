@@ -88,6 +88,7 @@ public class Boss : MonoBehaviour
     {
         Animator.SetTrigger("Die");
         Invoke("AfterAnimationComplete", Animator.GetCurrentAnimatorStateInfo(0).length);
+        GameManager.Instance.condition.AddExp(Data.Exp);
     }
 
     void AfterAnimationComplete()
