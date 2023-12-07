@@ -80,8 +80,6 @@ public class DungeonManager : Singleton<DungeonManager>
 
                 monster = goblinObjectPool.GetObject();
                 monster.objectPoolReturn += goblinObjectPool.ReturnObject;
-
-                //고블린 몬스터타입이 죽을때마다 goblinKillCount가 늘어나게끔
                 monster.objectPoolReturn += DungeonGoblinKilled;
                 break;
             case Define.MonsterType.SwordGoblin:
@@ -95,6 +93,7 @@ public class DungeonManager : Singleton<DungeonManager>
             case Define.MonsterType.OrkBerserk:
                 monster = orkberserkerObjectPool.GetObject();
                 monster.objectPoolReturn += orkberserkerObjectPool.ReturnObject;
+                monster.objectPoolReturn += DungeonOrkkilled;
                 break;
         }
 
@@ -110,6 +109,13 @@ public class DungeonManager : Singleton<DungeonManager>
         kill++;
         GameManager.Instance.UpdateGoblinKillCount(kill);
         Debug.Log("잡은 고블린수: " + GameManager.Instance.goblinkillCount);
+    }
+    public void DungeonOrkkilled(Monster OrkBerserk)
+    {
+        int orkKill = GameManager.Instance.orkKillCount;
+        orkKill++;
+        GameManager.Instance.UpdateOrkKillCount(orkKill);
+        Debug.Log("잡은 오크수: " + GameManager.Instance.orkKillCount);
     }
 
     public void Spawn()

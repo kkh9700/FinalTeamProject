@@ -1,9 +1,6 @@
-using System.Collections.Generic;
-using System.Text;
 using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem.XR;
-using UnityEngine.UI;
+
 
 public class QuestProgress : MonoBehaviour
 {
@@ -18,15 +15,15 @@ public class QuestProgress : MonoBehaviour
     private QuestController controller;
     
     void OnEnable()
-    {
-        
+    { 
         GameManager.OnGoblinKillCountChanged += UpdateGoblinKillCountUI;
+        GameManager.OnOrkKillCountChanged += UpdateOrkKillCountUI;
     }
 
     void OnDisable()
-    {
-        
+    {  
         GameManager.OnGoblinKillCountChanged -= UpdateGoblinKillCountUI;
+        GameManager.OnOrkKillCountChanged -= UpdateOrkKillCountUI;
     }
     void UpdateGoblinKillCountUI(int newGoblinKillCount)
     {
@@ -46,19 +43,32 @@ public class QuestProgress : MonoBehaviour
 
             }
         }
-        else if (quest.questType == Define.QuestType.InfiniteMonsterQuest)
+        
+    }
+    void UpdateOrkKillCountUI(int newOrkKillCount)
+    {
+        Debug.Log("오크UI 업데이트");      
+        int orkKills = newOrkKillCount;
+        QuestSO quest = board.selectQuest;
+        if (quest != null && quest.questType == Define.QuestType.InfiniteMonsterQuest)
         {
-            questProgInfinitemonsterName.text = quest.questName + "\n - " + goblinKills + " / " + quest.questComplete;
+            questProgInfinitemonsterName.text = quest.questName + "\n - " + orkKills + " / " + quest.questComplete;
 
-            if (goblinKills >= quest.questComplete)
+            if (orkKills >= quest.questComplete)
             {
                 questProgInfinitemonsterName.color = Color.red;
                 questProgInfinitemonsterName.fontStyle |= FontStyles.Italic;
                 questProgInfinitemonsterName.fontStyle |= FontStyles.Strikethrough;
             }
         }
-
-
+        else if(quest == null)
+        {
+            Debug.LogError("quest가 null");
+        }
+        else
+        {
+            Debug.LogError("questtype이 InfiniteMonster아님"+ quest.questType);
+        }
     }
     public void ShowQuestProgress(QuestSO selectedquest) 
     {
@@ -91,9 +101,9 @@ public class QuestProgress : MonoBehaviour
         }
         else if (selectedquest.questType == Define.QuestType.InfiniteMonsterQuest) 
         {
-            int goblinKills = GameManager.Instance.goblinkillCount;
-            questProgInfinitemonsterName.text = selectedquest.questName + "\n - " + goblinKills + " / " + selectedquest.questComplete;
-            if (goblinKills >= selectedquest.questComplete)
+            int orkKills = GameManager.Instance.goblinkillCount;
+            questProgInfinitemonsterName.text = selectedquest.questName + "\n - " + orkKills + " / " + selectedquest.questComplete;
+            if (orkKills >= selectedquest.questComplete)
             {
                 InfiniteMonsterQuestReward(selectedquest);
 

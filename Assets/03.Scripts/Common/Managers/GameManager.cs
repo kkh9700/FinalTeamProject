@@ -13,6 +13,7 @@ public class GameManager : Singleton<GameManager>
     public PlayerCondition condition;
 
     public int goblinkillCount = 0;
+    public int orkKillCount = 0;
     public GameObject Myplayer;
     public EventSystem eventSystem;
 
@@ -24,6 +25,8 @@ public class GameManager : Singleton<GameManager>
 
     public delegate void GoblinKillCountChanged(int newCount);
     public static event GoblinKillCountChanged OnGoblinKillCountChanged;
+    public delegate void OrkKillCountChanged(int orkCount);
+    public static event OrkKillCountChanged OnOrkKillCountChanged;
     private void Start()
     {
 
@@ -221,6 +224,13 @@ public class GameManager : Singleton<GameManager>
 
 
         OnGoblinKillCountChanged?.Invoke(goblinkillCount);
+    }
+    public void UpdateOrkKillCount(int orkCount)
+    {
+        Debug.Log("오크 카운트 호출" + orkCount);
+        orkKillCount = orkCount;
+
+        OnOrkKillCountChanged?.Invoke(orkKillCount);
     }
     #endregion GamePlay
 }
