@@ -20,8 +20,8 @@ MonoBehaviour:
     \uC88B\uC740 \uC77C\uC774 \uC788\uC744\uC9C0\uB3C4..?!"
   <questCondition>k__BackingField: "NPC 1\uBA85\uACFC \uC778\uC0AC\uC644\uB8CC"
   <questComplete>k__BackingField: 1
-  <questReward>k__BackingField: "\uAE08\uD654 3\uAC1C"
-  <questRewardCoin>k__BackingField: 3
+  <questReward>k__BackingField: "\uAE08\uD654 5\uAC1C"
+  <questRewardCoin>k__BackingField: 5
   relatedNPCs:
   - {fileID: 11400000, guid: cd1dfb6ddf4d3454e9f6e1773962761d, type: 2}
   - {fileID: 11400000, guid: f0f69b6bd54ec3744b1bdfea587625f1, type: 2}

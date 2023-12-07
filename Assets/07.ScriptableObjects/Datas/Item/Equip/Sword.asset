@@ -21,7 +21,8 @@ MonoBehaviour:
   <prefab>k__BackingField: {fileID: 1014989259798498, guid: fa55476bd47db394bb1a6ca1e58c8147,
     type: 3}
   <itemPrice>k__BackingField: 15
+  <audioClip>k__BackingField: {fileID: 0}
   equipType: 4
   options: []
-  Attack: 0
+  Attack: 5
   Deffence: 0

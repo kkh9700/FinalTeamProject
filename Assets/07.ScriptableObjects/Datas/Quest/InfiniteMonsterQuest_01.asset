@@ -15,11 +15,12 @@ MonoBehaviour:
   <questIndex>k__BackingField: 3
   <questName>k__BackingField: "\uB9C8\uC744\uC758 \uC6A9\uC0AC [\uBC18\uBCF5]"
   <questType>k__BackingField: 3
-  <questDescription>k__BackingField: "\uACE0\uBE14\uB9B0\uC758 \uC218\uB294 \uC904\uC5B4\uB4E4
+  <questDescription>k__BackingField: "\uBAAC\uC2A4\uD130\uC758 \uC218\uB294 \uC904\uC5B4\uB4E4
     \uC0DD\uAC01\uC744 \uC548\uD55C\uB2E4.. \uCD5C\uB300\uD55C \uB9CE\uC774 \uCC98\uCE58\uD574\uC8FC\uAE38
     \uBC14\uB798!"
-  <questCondition>k__BackingField: "\uACE0\uBE14\uB9B0 1000\uB9C8\uB9AC \uCC98\uCE58"
-  <questComplete>k__BackingField: 100
-  <questReward>k__BackingField: "\uAE08\uD654 10\uAC1C"
-  <questRewardCoin>k__BackingField: 10
+  <questCondition>k__BackingField: "\uC624\uD06C\uBC84\uC11C\uCEE4 1000\uB9C8\uB9AC
+    \uCC98\uCE58"
+  <questComplete>k__BackingField: 1000
+  <questReward>k__BackingField: "\uAE08\uD654 20\uAC1C"
+  <questRewardCoin>k__BackingField: 20
   relatedNPCs: []

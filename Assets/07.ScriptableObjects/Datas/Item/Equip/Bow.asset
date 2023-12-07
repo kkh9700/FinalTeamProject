@@ -21,9 +21,10 @@ MonoBehaviour:
     type: 3}
   <prefab>k__BackingField: {fileID: 0}
   <itemPrice>k__BackingField: 15
+  <audioClip>k__BackingField: {fileID: 0}
   equipType: 4
   options:
   - type: 0
     value: 0
-  Attack: 0
+  Attack: 5
   Deffence: 0
